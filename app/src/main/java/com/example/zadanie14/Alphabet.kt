@@ -2,7 +2,6 @@ package com.example.zadanie14
 
 fun mainAlphabet(str:String):String{
 
-
     return counter(str).toString()
 }
 
@@ -20,8 +19,6 @@ fun getNum(char: Char): Int {
         alphabetList.put(i, ch)
         i++
     }
-
-
 
     var number: Int = 0
     for (x in 1..alphabetList.size){
