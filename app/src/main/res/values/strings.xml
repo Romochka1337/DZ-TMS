@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">dz15</string>
+    <string name="task_1_users">Task 1(Users)</string>
+    <string name="btnSortByName">сортировка по имени</string>
+    <string name="btnRmByAge">удалить малолеток</string>
+    <string name="task_2_random_number">Task 2(Random Number)</string>
+    <string name="etGetNum">введите число</string>
+    <string name="btnRandNum">Случайное число</string>
+    <string name="task_3_sum_of_digits">Task 3(Sum Of Digits)</string>
+    <string name="btnSumOfDigits">посчитать сумму</string>
+    <string name="btnShowUsersList">вывести список юзеров</string>
+    <string name="etInpNum">введите число</string>
 </resources>
