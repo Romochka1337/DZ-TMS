@@ -9,7 +9,7 @@ fun mainUsers(): MutableList<User> {
     val zelya:User = User("Володя","Зеленский",10)
     val putlet:User = User("Володя","Путин",200)
     val bidon:User = User("Джо","Байден", 300)
-
+    
     addUserToList(bidon,usersList)
     addUserToList(luka, usersList)
     addUserToList(zelya, usersList)

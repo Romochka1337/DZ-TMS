@@ -7,37 +7,37 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var usersList:MutableList<User>
+    private lateinit var twRandomNum: TextView
+    private lateinit var etInpNum: EditText
+    private lateinit var twSumOfDs: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        initialization()
         mainSumRanNum()
         mainCat()
     }
-    var usersList:MutableList<User> = mainUsers()
-    fun onClickShowUsersList(view: View) {
+    private fun initialization() {
+        usersList = mainUsers()
+        twRandomNum = findViewById(R.id.twRandNum)
+        twSumOfDs = findViewById(R.id.twSumOfDigits)
+        etInpNum = findViewById(R.id.etInpNum)
+    }
+    fun showUsersList(view: View) {
         showUsersList(usersList)
     }
-    fun onClickSortByName(view: View) {
+    fun sortByName(view: View) {
         sortByName(usersList)
     }
-    fun onClickRmByAge(view: View) {
+    fun rmByAge(view: View) {
         removeByAge(usersList)
     }
-    fun onClickRandNum(view: View) {
-        val twRandomNum: TextView = findViewById(R.id.twRandNum)
+    fun randNum(view: View) {
         twRandomNum.text = mainRandNum()
     }
-    fun onClickSumOfDigits(view: View) {
-        val etInpNum: EditText = findViewById(R.id.etInpNum)
-        val strNum:String = etInpNum.text.toString()
-        if (strNum == ""){
-            val twSumOfDs:TextView= findViewById(R.id.twSumOfDigits)
-            twSumOfDs.text = "вы ничего не ввели"
-        }
-        else{
-            val twSumOfDs:TextView= findViewById(R.id.twSumOfDigits)
-            twSumOfDs.text = mainSumOfDs(strNum)
-        }
+    fun sumOfDigits(view: View) {
+        twSumOfDs.text = mainSumOfDs(etInpNum.text.toString())
     }
 }
