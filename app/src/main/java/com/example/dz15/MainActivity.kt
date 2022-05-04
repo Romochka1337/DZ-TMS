@@ -3,6 +3,7 @@ package com.example.dz15
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var twRandomNum: TextView
     private lateinit var etInpNum: EditText
     private lateinit var twSumOfDs: TextView
+    private lateinit var btnSortByName: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,18 +20,22 @@ class MainActivity : AppCompatActivity() {
         initialization()
         mainSumRanNum()
         mainCat()
+        sortByName()
     }
     private fun initialization() {
         usersList = mainUsers()
         twRandomNum = findViewById(R.id.twRandNum)
         twSumOfDs = findViewById(R.id.twSumOfDigits)
         etInpNum = findViewById(R.id.etInpNum)
+        btnSortByName = findViewById(R.id.btnSortByName)
     }
     fun showUsersList(view: View) {
         showUsersList(usersList)
     }
-    fun sortByName(view: View) {
-        sortByName(usersList)
+    private fun sortByName(){
+        btnSortByName.setOnClickListener(){
+            sortByName(usersList)
+        }
     }
     fun rmByAge(view: View) {
         removeByAge(usersList)

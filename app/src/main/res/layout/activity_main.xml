@@ -21,7 +21,6 @@
         android:id="@+id/btnSortByName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="sortByName"
         android:text="@string/btnSortByName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
