@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">dz16</string>
+    <string name="proverka">проверить</string>
+    <string name="inputNum">Введите число A</string>
+    <string name="task_1_even_or_odd">Task 1(Even or Odd)</string>
+    <string name="btnCountRating">посчитать оценку</string>
+    <string name="etInpRating">Введите рейтинг</string>
+    <string name="task3_rating">Task3 (Rating)</string>
+    <string name="task_6_factorial">Task 6(Factorial)</string>
+    <string name="factorial">факториал</string>
+    <string name="inpB">Введите число B</string>
+    <string name="translate">перевести</string>
+    <string name="inpNum">Введите десятичное число</string>
+    <string name="task_4_envelope">Task 4(Envelope)</string>
+    <string name="a_b_c_d">Введите стороны конвертов a,b,c,d</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
+    <string name="c">c</string>
+    <string name="d">d</string>
+    <string name="task_7_decimal_to_binary">Task 7(Decimal to Binary)</string>
 </resources>
