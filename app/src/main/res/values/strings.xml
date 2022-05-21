@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">DZ19</string>
+    <string name="flags">флаги</string>
+    <string name="france">франция</string>
+    <string name="germany">германия</string>
+    <string name="belgium">бельгия</string>
+    <string name="latvia">латвия</string>
+    <string name="thailand">тайланд</string>
+    <string name="madagascar">мадагаскар</string>
+    <string name="sweden">швеция</string>
+    <string name="back">назад</string>
+
 </resources>

@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DZ19">
         <activity
+            android:name=".MadagascarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SwedenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThailandActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LatviaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BelgiumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GermanyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FranceActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
