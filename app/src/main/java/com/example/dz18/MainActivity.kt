@@ -98,28 +98,20 @@ class MainActivity : AppCompatActivity() {
         binding.tvCabbageResult.visibility = View.VISIBLE
         binding.tvBeetResult.visibility = View.VISIBLE
 
-        if ((Region.Minsk.timePotato <= Region.Gomel.timePotato)&&(Region.Minsk.timePotato <= Region.Brest.timePotato)){
-            binding.tvPotatoResult.text = "Минск быстрее всех собрал урожай картофеля"
-        }else if ((Region.Gomel.timePotato <= Region.Minsk.timePotato)&&(Region.Gomel.timePotato <= Region.Brest.timePotato)){
-            binding.tvPotatoResult.text = "Гомель быстрее всех собрал урожай картофеля"
-        }else{
-            binding.tvPotatoResult.text = "Брест быстрее всех собрал урожай картофеля"
+        when{
+            ((Region.Minsk.timePotato <= Region.Gomel.timePotato)&&(Region.Minsk.timePotato <= Region.Brest.timePotato)) ->  binding.tvPotatoResult.text = "Минск быстрее всех собрал урожай картофеля"
+            ((Region.Gomel.timePotato <= Region.Minsk.timePotato)&&(Region.Gomel.timePotato <= Region.Brest.timePotato)) ->  binding.tvPotatoResult.text = "Гомель быстрее всех собрал урожай картофеля"
+            else -> binding.tvPotatoResult.text = "Брест быстрее всех собрал урожай картофеля"
         }
-
-        if ((Region.Minsk.timeCabbage <= Region.Gomel.timeCabbage)&&(Region.Minsk.timeCabbage <= Region.Brest.timeCabbage)){
-            binding.tvCabbageResult.text = "Минск быстрее всех собрал урожай капусты"
-        }else if ((Region.Gomel.timeCabbage <= Region.Minsk.timeCabbage)&&(Region.Gomel.timeCabbage <= Region.Brest.timeCabbage)){
-            binding.tvCabbageResult.text = "Гомель быстрее всех собрал урожай капусты"
-        }else{
-            binding.tvCabbageResult.text = "Брест быстрее всех собрал урожай капусты"
+        when{
+            ((Region.Minsk.timeCabbage <= Region.Gomel.timeCabbage)&&(Region.Minsk.timeCabbage <= Region.Brest.timeCabbage)) -> binding.tvCabbageResult.text = "Минск быстрее всех собрал урожай капусты"
+            ((Region.Gomel.timeCabbage <= Region.Minsk.timeCabbage)&&(Region.Gomel.timeCabbage <= Region.Brest.timeCabbage)) -> binding.tvCabbageResult.text = "Гомель быстрее всех собрал урожай капусты"
+            else -> binding.tvCabbageResult.text = "Брест быстрее всех собрал урожай капусты"
         }
-
-        if ((Region.Minsk.timeBeet <= Region.Gomel.timeBeet)&&(Region.Minsk.timeBeet <= Region.Brest.timeBeet)){
-            binding.tvBeetResult.text = "Минск быстрее всех собрал урожай свеклы"
-        }else if ((Region.Gomel.timeBeet <= Region.Minsk.timeBeet)&&(Region.Gomel.timeBeet <= Region.Brest.timeBeet)){
-            binding.tvBeetResult.text = "Гомель быстрее всех собрал урожай свеклы"
-        }else{
-            binding.tvBeetResult.text = "Брест быстрее всех собрал урожай свеклы"
+        when{
+            ((Region.Minsk.timeBeet <= Region.Gomel.timeBeet)&&(Region.Minsk.timeBeet <= Region.Brest.timeBeet)) -> binding.tvBeetResult.text = "Минск быстрее всех собрал урожай свеклы"
+            ((Region.Gomel.timeBeet <= Region.Minsk.timeBeet)&&(Region.Gomel.timeBeet <= Region.Brest.timeBeet)) -> binding.tvBeetResult.text = "Гомель быстрее всех собрал урожай свеклы"
+            else -> binding.tvBeetResult.text = "Брест быстрее всех собрал урожай свеклы"
         }
     }
 }
