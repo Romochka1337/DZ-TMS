@@ -8,4 +8,6 @@
     <string name="colon">:</string>
     <string name="seconds">секунды</string>
     <string name="inpTime">Введите время</string>
+    <string name="proceed">продолжить</string>
+    <string name="finish">finish</string>
 </resources>

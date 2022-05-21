@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun startTimer(timeLeft:Long){
         binding.btnStart.visibility = View.INVISIBLE
-        binding.btnStart.text = "старт"
+        binding.btnStart.text = R.string.start.toString()
         var seconds:Long = 0
         var minutes:Long = 0
         val strSeconds:String =  binding.etInpSeconds.text.toString()
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             getTimeLeft(p0)
         }
         override fun onFinish() {
-            binding.tvOutTime.text = "Finish"
+            binding.tvOutTime.text = getString(R.string.finish)
             }
         }.start()
         binding.btnStop.visibility = View.VISIBLE
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun stopTimer(timer: CountDownTimer){
         binding.btnStart.visibility = View.VISIBLE
-        binding.btnStart.text = "продолжить"
+        binding.btnStart.text = getString(R.string.proceed)
         binding.btnStop.visibility = View.INVISIBLE
         timer.cancel()
     }
