@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DZ18</string>
+    <string name="showResult">Показать результат</string>
+    <string name="minskaya">Минская</string>
+    <string name="start">Начать</string>
+    <string name="gomel">Гомельская</string>
+    <string name="brest">Брестская</string>
 </resources>
