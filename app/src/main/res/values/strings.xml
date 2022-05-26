@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">DZ17</string>
+    <string name="_00">00</string>
+    <string name="start">старт</string>
+    <string name="stop">стоп</string>
+    <string name="minutes">минуты</string>
+    <string name="hours">часы</string>
+    <string name="colon">:</string>
+    <string name="seconds">секунды</string>
+    <string name="inpTime">Введите время</string>
+    <string name="proceed">продолжить</string>
+    <string name="finish">finish</string>
 </resources>
