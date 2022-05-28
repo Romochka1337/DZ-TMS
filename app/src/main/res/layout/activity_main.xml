@@ -8,59 +8,74 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/flags" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnToFrance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/france" />
+                <Button
+                    android:id="@+id/btnToFrance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/france" />
 
-        <Button
-            android:id="@+id/btnToGermany"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/germany" />
+                <Button
+                    android:id="@+id/btnToGermany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/germany" />
 
-        <Button
-            android:id="@+id/btnToBelgium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/belgium" />
+                <Button
+                    android:id="@+id/btnToBelgium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/belgium" />
 
-        <Button
-            android:id="@+id/btnToLatvia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/latvia" />
+                <Button
+                    android:id="@+id/btnToLatvia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/latvia" />
 
-        <Button
-            android:id="@+id/btnToThailand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/thailand" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btnToMadagascar"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/madagascar" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnToSweden"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/sweden" />
+                <Button
+                    android:id="@+id/btnToThailand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/thailand" />
+
+                <Button
+                    android:id="@+id/btnToMadagascar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/madagascar" />
+
+                <Button
+                    android:id="@+id/btnToSweden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/sweden" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/conteiner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"></FrameLayout>
+
 </LinearLayout>
 
