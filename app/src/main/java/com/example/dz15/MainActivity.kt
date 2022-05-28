@@ -6,44 +6,29 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.example.dz15.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var usersList:MutableList<User>
-    private lateinit var twRandomNum: TextView
-    private lateinit var etInpNum: EditText
-    private lateinit var twSumOfDs: TextView
-    private lateinit var btnSortByName: Button
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        initialization()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.btnTask1.setOnClickListener { startFragment1() }
+        binding.btnTask2.setOnClickListener { startFragment2() }
+        binding.btnTask3.setOnClickListener { startFragment3() }
         mainSumRanNum()
         mainCat()
-        sortByName()
     }
-    private fun initialization() {
-        usersList = mainUsers()
-        twRandomNum = findViewById(R.id.twRandNum)
-        twSumOfDs = findViewById(R.id.twSumOfDigits)
-        etInpNum = findViewById(R.id.etInpNum)
-        btnSortByName = findViewById(R.id.btnSortByName)
+    private fun startFragment1() {
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task1Fragment.newInstance()).commit()
     }
-    fun showUsersList(view: View) {
-        showUsersList(usersList)
+    private fun startFragment2() {
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task2Fragment.newInstance()).commit()
     }
-    private fun sortByName(){
-        btnSortByName.setOnClickListener(){
-            sortByName(usersList)
-        }
-    }
-    fun rmByAge(view: View) {
-        removeByAge(usersList)
-    }
-    fun randNum(view: View) {
-        twRandomNum.text = mainRandNum()
-    }
-    fun sumOfDigits(view: View) {
-        twSumOfDs.text = mainSumOfDs(etInpNum.text.toString())
+    private fun startFragment3() {
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task3Fragment.newInstance()).commit()
     }
 }
