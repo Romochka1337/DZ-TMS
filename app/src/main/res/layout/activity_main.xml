@@ -1,403 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etInpNumA"
-        android:layout_width="160dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:hint="@string/inputNum"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
 
-    <Button
-        android:id="@+id/btnEvenOrOdd"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="evenOrOdd"
-        android:text="@string/proverka"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tvTask1"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnTask1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Task1" />
+
+        <Button
+            android:id="@+id/btnTask2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Task2" />
+
+        <Button
+            android:id="@+id/btnTask3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Task3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/task_1_even_or_odd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tvOutEvenOrOdd"
-        android:layout_width="210dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
+        <Button
+            android:id="@+id/btnTask4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="task4" />
 
-    <TextView
-        android:id="@+id/tvTask3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/task3_rating"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        <Button
+            android:id="@+id/btnTask6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Task6" />
 
-    <EditText
-        android:id="@+id/etInpRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/etInpRating"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        <Button
+            android:id="@+id/btnTask7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Task7" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnCountRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="countGrade"
-        android:text="@string/btnCountRating"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
+    <FrameLayout
+        android:id="@+id/conteiner"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
 
-    <TextView
-        android:id="@+id/tvOutGrade"
-        android:layout_width="101dp"
-        android:layout_height="42dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.887"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474" />
-
-    <TextView
-        android:id="@+id/tvTask6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/task_6_factorial"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
-
-    <EditText
-        android:id="@+id/etInpFacNum"
-        android:layout_width="95dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
-
-    <TextView
-        android:id="@+id/tvOutFactorial"
-        android:layout_width="168dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.986"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.804" />
-
-    <Button
-        android:id="@+id/btnFactorial"
-        android:layout_width="131dp"
-        android:layout_height="53dp"
-        android:onClick="countFactorial"
-        android:text="@string/factorial"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
-
-    <EditText
-        android:id="@+id/etInpNumB"
-        android:layout_width="167dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:hint="@string/inpB"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
-
-    <TextView
-        android:id="@+id/tvTask7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/task_7_decimal_to_binary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
-
-    <TextView
-        android:id="@+id/tvOutBinary"
-        android:layout_width="136dp"
-        android:layout_height="46dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
-
-    <Button
-        android:id="@+id/btnDecToBin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="decToBin"
-        android:text="@string/translate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.989"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.995" />
-
-    <EditText
-        android:id="@+id/etInpDec"
-        android:layout_width="263dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="@string/inpNum"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.995" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/task_4_envelope"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
-
-    <EditText
-        android:id="@+id/etInpASide"
-        android:layout_width="71dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:hint="@string/a"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.599" />
-
-    <EditText
-        android:id="@+id/etInpBSide"
-        android:layout_width="78dp"
-        android:layout_height="39dp"
-        android:ems="10"
-        android:hint="@string/b"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
-
-    <EditText
-        android:id="@+id/etInpCSide"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:hint="@string/c"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.761"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.597" />
-
-    <EditText
-        android:id="@+id/etInpDSide"
-        android:layout_width="76dp"
-        android:layout_height="39dp"
-        android:ems="10"
-        android:hint="@string/d"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.991"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
-
-    <Button
-        android:id="@+id/btnCkeckSides"
-        android:layout_width="133dp"
-        android:layout_height="44dp"
-        android:text="@string/proverka"
-        android:onClick="checkSides"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.366"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
-
-    <TextView
-        android:id="@+id/tvInpSides"
-        android:layout_width="99dp"
-        android:layout_height="86dp"
-        android:text="@string/a_b_c_d"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.009"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
-
-    <TextView
-        android:id="@+id/tvOutCheckSides"
-        android:layout_width="163dp"
-        android:layout_height="42dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <TextView
-        android:id="@+id/tvTask2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Task 2(function variable)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186" />
-
-    <TextView
-        android:id="@+id/tvOutFuncResult"
-        android:layout_width="60dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.991"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.248" />
-
-    <Button
-        android:id="@+id/btnFuncVar"
-        android:layout_width="110dp"
-        android:layout_height="59dp"
-        android:text="@string/proverka"
-        android:onClick="functionVar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
-
-    <EditText
-        android:id="@+id/etInpFuncA"
-        android:layout_width="73dp"
-        android:layout_height="58dp"
-        android:ems="10"
-        android:hint="A"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.008"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.241" />
-
-    <EditText
-        android:id="@+id/etInpFuncB"
-        android:layout_width="74dp"
-        android:layout_height="59dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:hint="B"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.241" />
-
-    <EditText
-        android:id="@+id/etInpFuncC"
-        android:layout_width="75dp"
-        android:layout_height="59dp"
-        android:ems="10"
-        android:hint="C"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.241" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</LinearLayout>
