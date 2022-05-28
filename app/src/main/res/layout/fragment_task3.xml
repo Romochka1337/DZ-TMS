@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Task3Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewZagadkiTask3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task 3(Zagadki)"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.361"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewZagadka"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.55"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.436"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTextOtvet"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:inputType="textCapWords"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.546"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/buttonOtvet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ответить"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.635"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewRightOtvet"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.102"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.709"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+</FrameLayout>
