@@ -16,9 +16,4 @@ class SwedenFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_sweden, container, false)
     }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = SwedenFragment()
-    }
 }
