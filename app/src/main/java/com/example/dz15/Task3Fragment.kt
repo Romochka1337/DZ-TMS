@@ -28,8 +28,4 @@ class Task3Fragment : Fragment() {
     private fun sumOfDigits() {
         twSumOfDs.text = mainSumOfDs(etInpNum.text.toString())
     }
-    companion object {
-        @JvmStatic
-        fun newInstance() = Task3Fragment()
-    }
 }

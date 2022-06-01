@@ -24,8 +24,4 @@ class Task2Fragment : Fragment() {
     private fun randNum() {
         twRandomNum.text = mainRandNum()
     }
-    companion object {
-        @JvmStatic
-        fun newInstance() = Task2Fragment()
-    }
 }

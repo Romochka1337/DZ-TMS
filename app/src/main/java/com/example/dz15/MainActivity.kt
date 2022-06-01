@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.example.dz15.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,19 +17,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnTask1.setOnClickListener { startFragment1() }
-        binding.btnTask2.setOnClickListener { startFragment2() }
-        binding.btnTask3.setOnClickListener { startFragment3() }
+        binding.btnTask1.setOnClickListener { startFragment(Task1Fragment()) }
+        binding.btnTask2.setOnClickListener { startFragment(Task2Fragment()) }
+        binding.btnTask3.setOnClickListener { startFragment(Task3Fragment()) }
         mainSumRanNum()
         mainCat()
     }
-    private fun startFragment1() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task1Fragment.newInstance()).commit()
-    }
-    private fun startFragment2() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task2Fragment.newInstance()).commit()
-    }
-    private fun startFragment3() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task3Fragment.newInstance()).commit()
+    private fun startFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, fragment).commit()
     }
 }

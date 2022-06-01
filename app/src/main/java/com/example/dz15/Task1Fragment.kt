@@ -36,8 +36,4 @@ class Task1Fragment : Fragment() {
     private fun rmByAge() {
         removeByAge(usersList)
     }
-    companion object {
-        @JvmStatic
-        fun newInstance() = Task1Fragment()
-    }
 }
