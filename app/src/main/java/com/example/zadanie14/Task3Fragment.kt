@@ -25,10 +25,6 @@ class Task3Fragment : Fragment() {
         return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance() = Task3Fragment()
-    }
     var rightOtvet:String = getRightOtvet(num, createOtvetList())
     private fun getOtvet() {
         val editTextOtvet: EditText = requireView().findViewById(R.id.editTextOtvet)

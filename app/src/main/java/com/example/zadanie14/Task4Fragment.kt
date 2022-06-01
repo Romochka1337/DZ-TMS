@@ -21,10 +21,7 @@ class Task4Fragment : Fragment() {
         binding.buttonCountAlphabet.setOnClickListener { getString() }
         return binding.root
     }
-    companion object {
-        @JvmStatic
-        fun newInstance() = Task4Fragment()
-    }
+
     fun getString() {
         val editTextInputString: EditText = requireView().findViewById(R.id.editTextInputString)
         val inputString:String = editTextInputString.text.toString()

@@ -20,11 +20,6 @@ class Task2Fragment : Fragment() {
         return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance() = Task2Fragment()
-    }
-
     private fun getQuestion() {
         val editTextInputQuest: EditText = requireView().findViewById(R.id.editTextInputQuestion)
         val question:String = editTextInputQuest.text.toString()

@@ -6,7 +6,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.example.zadanie14.databinding.ActivityMainBinding
+import com.example.zadanie14.databinding.FragmentTask2Binding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -17,20 +19,13 @@ class MainActivity : AppCompatActivity() {
         mainUser()
 
         val btnTask2 : Button = findViewById(R.id.btnTask2)
-        btnTask2.setOnClickListener { startFragment2() }
+        btnTask2.setOnClickListener { startFragment(Task2Fragment()) }
         val btnTask3 : Button = findViewById(R.id.btnTask3)
-        btnTask3.setOnClickListener { startFragment3() }
+        btnTask3.setOnClickListener { startFragment(Task3Fragment()) }
         val btnTask4 : Button = findViewById(R.id.btnTask4)
-        btnTask4.setOnClickListener { startFragment4() }
+        btnTask4.setOnClickListener { startFragment(Task4Fragment()) }
     }
-
-    private fun startFragment2() {
-       supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task2Fragment.newInstance()).commit()
-    }
-    private fun startFragment3() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task3Fragment.newInstance()).commit()
-    }
-    private fun startFragment4() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task4Fragment.newInstance()).commit()
+    private fun startFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, fragment).commit()
     }
 }
