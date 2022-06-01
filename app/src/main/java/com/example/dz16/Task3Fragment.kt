@@ -29,9 +29,4 @@ class Task3Fragment : Fragment() {
     private fun countGrade() {
         tvOutGrade.text = rating(etInpRating.text.toString())
     }
-    companion object {
-
-        @JvmStatic
-        fun newInstance() = Task3Fragment()
-    }
 }

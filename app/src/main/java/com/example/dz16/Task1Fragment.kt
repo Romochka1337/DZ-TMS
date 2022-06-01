@@ -28,9 +28,4 @@ class Task1Fragment : Fragment() {
     private fun evenOrOdd() {
         tvOutEvenOrOdd.text = evenOrOdd(etInpNumA.text.toString(), etInpNumB.text.toString())
     }
-    companion object {
-
-        @JvmStatic
-        fun newInstance() = Task1Fragment()
-    }
 }

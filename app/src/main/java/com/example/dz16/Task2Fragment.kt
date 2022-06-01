@@ -34,10 +34,4 @@ class Task2Fragment : Fragment() {
         val strC: String = etInpFuncC.text.toString()
         tvOutFuncResult.text = mainFuncVar(strA,strB,strC)
     }
-
-    companion object {
-
-        @JvmStatic
-        fun newInstance() = Task2Fragment()
-    }
 }

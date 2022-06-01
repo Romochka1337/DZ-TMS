@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.example.dz16.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,29 +16,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         sumEvenNums()
-        binding.btnTask1.setOnClickListener { startFragment1() }
-        binding.btnTask2.setOnClickListener { startFragment2() }
-        binding.btnTask3.setOnClickListener { startFragment3() }
-        binding.btnTask4.setOnClickListener { startFragment4() }
-        binding.btnTask6.setOnClickListener { startFragment6() }
-        binding.btnTask7.setOnClickListener { startFragment7() }
+        binding.btnTask1.setOnClickListener { startFragment(Task1Fragment()) }
+        binding.btnTask2.setOnClickListener { startFragment(Task2Fragment()) }
+        binding.btnTask3.setOnClickListener { startFragment(Task3Fragment()) }
+        binding.btnTask4.setOnClickListener { startFragment(Task4Fragment()) }
+        binding.btnTask6.setOnClickListener { startFragment(Task6Fragment()) }
+        binding.btnTask7.setOnClickListener { startFragment(Task7Fragment()) }
     }
-    private fun startFragment1() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task1Fragment.newInstance()).commit()
-    }
-    private fun startFragment2() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task2Fragment.newInstance()).commit()
-    }
-    private fun startFragment3() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task3Fragment.newInstance()).commit()
-    }
-    private fun startFragment4() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task4Fragment.newInstance()).commit()
-    }
-    private fun startFragment6() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task6Fragment.newInstance()).commit()
-    }
-    private fun startFragment7() {
-        supportFragmentManager.beginTransaction().replace(R.id.conteiner, Task7Fragment.newInstance()).commit()
+    private fun startFragment(fragment:Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, fragment).commit()
     }
 }

@@ -26,9 +26,4 @@ class Task6Fragment : Fragment() {
     private fun countFactorial() {
         tvOutFact.text = factorial(etInpFact.text.toString())
     }
-    companion object {
-
-        @JvmStatic
-        fun newInstance() = Task6Fragment()
-    }
 }

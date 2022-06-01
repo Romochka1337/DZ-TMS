@@ -36,8 +36,4 @@ class Task4Fragment : Fragment() {
         val sideD:String =  etInpDSide.text.toString()
         tvCheckSides.text = envelope(sideA,sideB,sideC,sideD)
     }
-    companion object {
-        @JvmStatic
-        fun newInstance() = Task4Fragment()
-    }
 }

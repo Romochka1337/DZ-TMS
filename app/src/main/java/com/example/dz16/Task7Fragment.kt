@@ -26,8 +26,4 @@ class Task7Fragment : Fragment() {
     fun decToBin() {
         tvOutBin.text = decToBin(etInpDec.text.toString())
     }
-    companion object {
-        @JvmStatic
-        fun newInstance() = Task7Fragment()
-    }
 }
