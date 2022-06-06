@@ -5,78 +5,25 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import com.example.dz16.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var etInpNumA: EditText
-    private lateinit var etInpNumB: EditText
-    private lateinit var tvOutEvenOrOdd: TextView
-    private lateinit var etInpRating: EditText
-    private lateinit var tvOutGrade: TextView
-    private lateinit var etInpFact: EditText
-    private lateinit var tvOutFact: TextView
-    private lateinit var etInpDec: EditText
-    private lateinit var tvOutBin: TextView
-    private lateinit var etInpASide: EditText
-    private lateinit var etInpBSide: EditText
-    private lateinit var etInpCSide: EditText
-    private lateinit var etInpDSide: EditText
-    private lateinit var tvCheckSides: TextView
-    private lateinit var tvOutFuncResult: TextView
-    private lateinit var etInpFuncA: EditText
-    private lateinit var etInpFuncB: EditText
-    private lateinit var etInpFuncC: EditText
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        initialization()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         sumEvenNums()
+        binding.btnTask1.setOnClickListener { startFragment(Task1Fragment()) }
+        binding.btnTask2.setOnClickListener { startFragment(Task2Fragment()) }
+        binding.btnTask3.setOnClickListener { startFragment(Task3Fragment()) }
+        binding.btnTask4.setOnClickListener { startFragment(Task4Fragment()) }
+        binding.btnTask6.setOnClickListener { startFragment(Task6Fragment()) }
+        binding.btnTask7.setOnClickListener { startFragment(Task7Fragment()) }
     }
-    private fun initialization(){
-        etInpNumA = findViewById(R.id.etInpNumA)
-        etInpNumB = findViewById(R.id.etInpNumB)
-        tvOutEvenOrOdd = findViewById(R.id.tvOutEvenOrOdd)
-        etInpRating = findViewById(R.id.etInpRating)
-        tvOutGrade = findViewById(R.id.tvOutGrade)
-        etInpFact = findViewById(R.id.etInpFacNum)
-        tvOutFact = findViewById(R.id.tvOutFactorial)
-        etInpDec = findViewById(R.id.etInpDec)
-        tvOutBin = findViewById(R.id.tvOutBinary)
-        etInpASide = findViewById(R.id.etInpASide)
-        etInpBSide = findViewById(R.id.etInpBSide)
-        etInpCSide = findViewById(R.id.etInpCSide)
-        etInpDSide = findViewById(R.id.etInpDSide)
-        tvCheckSides = findViewById(R.id.tvOutCheckSides)
-        tvOutFuncResult = findViewById(R.id.tvOutFuncResult)
-        etInpFuncA = findViewById(R.id.etInpFuncA)
-        etInpFuncB = findViewById(R.id.etInpFuncB)
-        etInpFuncC = findViewById(R.id.etInpFuncC)
-    }
-    fun evenOrOdd(view: View) {
-        tvOutEvenOrOdd.text = evenOrOdd(etInpNumA.text.toString(), etInpNumB.text.toString())
-    }
-    fun countGrade(view: View) {
-        tvOutGrade.text = rating(etInpRating.text.toString())
-    }
-    fun countFactorial(view: View) {
-        tvOutFact.text = factorial(etInpFact.text.toString())
-    }
-
-    fun decToBin(view: View) {
-        tvOutBin.text = decToBin(etInpDec.text.toString())
-    }
-    fun checkSides(view: View) {
-        val sideA:String =  etInpASide.text.toString()
-        val sideB:String = etInpBSide.text.toString()
-        val sideC:String =  etInpCSide.text.toString()
-        val sideD:String =  etInpDSide.text.toString()
-        tvCheckSides.text = envelope(sideA,sideB,sideC,sideD)
-    }
-    fun functionVar(view: View) {
-        val strA: String = etInpFuncA.text.toString()
-        val strB: String = etInpFuncB.text.toString()
-        val strC: String = etInpFuncC.text.toString()
-        tvOutFuncResult.text = mainFuncVar(strA,strB,strC)
+    private fun startFragment(fragment:Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, fragment).commit()
     }
 }
