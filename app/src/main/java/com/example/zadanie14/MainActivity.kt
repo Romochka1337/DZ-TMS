@@ -3,43 +3,29 @@ package com.example.zadanie14
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import com.example.zadanie14.databinding.ActivityMainBinding
+import com.example.zadanie14.databinding.FragmentTask2Binding
 
 class MainActivity : AppCompatActivity() {
-
-    var num:Int = mainZagadki()
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         mainUser()
 
-        var textViewZagadka:TextView = findViewById(R.id.textViewZagadka)
-        textViewZagadka.setText(getZagadka(num, createZagadkiList()))
+        val btnTask2 : Button = findViewById(R.id.btnTask2)
+        btnTask2.setOnClickListener { startFragment(Task2Fragment()) }
+        val btnTask3 : Button = findViewById(R.id.btnTask3)
+        btnTask3.setOnClickListener { startFragment(Task3Fragment()) }
+        val btnTask4 : Button = findViewById(R.id.btnTask4)
+        btnTask4.setOnClickListener { startFragment(Task4Fragment()) }
     }
-
-    fun onClickGetQuestion(view: View) {
-        var editTextInputQuest:EditText = findViewById(R.id.EditTextInputQuestion)
-        var question:String = editTextInputQuest.text.toString()
-        var textViewOutAnsw:TextView = findViewById(R.id.textViewOutAnswer)
-        if (question == ""){
-            textViewOutAnsw.setText("Вопрос не введён") }
-        else{ textViewOutAnsw.setText(mainMagicBall())}
-    }
-
-    var rightOtvet:String = getRightOtvet(num, createOtvetList())
-    fun onClickGetOtvet(view: View) {
-        var editTextOtvet:EditText = findViewById(R.id.editTextOtvet)
-        var otvet:String = editTextOtvet.text.toString()
-
-        var textViewRightOtvet:TextView = findViewById(R.id.textViewRightOtvet)
-        textViewRightOtvet.setText(checkOtvet(otvet,rightOtvet))
-    }
-
-    fun onClickGetString(view: View) {
-        var editTextInputString: EditText = findViewById(R.id.editTextInputString)
-        var inputString:String = editTextInputString.text.toString()
-        var textViewOutSum: TextView = findViewById(R.id.textViewOutSum)
-        textViewOutSum.setText(mainAlphabet(inputString))
+    private fun startFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, fragment).commit()
     }
 }
