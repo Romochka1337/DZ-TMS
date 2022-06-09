@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DZ22</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start">старт</string>
+    <string name="pause">пауза</string>
+    <string name="confirm_password">Подтвердите пароль</string>
+    <string name="next">далее</string>
+    <string name="password">Пароль</string>
+    <string name="login">Логин</string>
+    <string name="loginIsEmpty">Логин не введён</string>
+    <string name="passwordIsEmpty">Пароль не введён</string>
+    <string name="confirmPasswordIsEmpty">Подтверждающий пароль не введён</string>
+    <string name="passwordsNotEqual">Пароли не совпадают</string>
+</resources>
