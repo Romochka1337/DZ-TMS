@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">DZ22</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start">start</string>
+    <string name="pause">pause</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="next">next</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="loginIsEmpty">Login is empty</string>
+    <string name="passwordIsEmpty">Password is empty</string>
+    <string name="confirmPasswordIsEmpty">Confirm Password is empty</string>
+    <string name="passwordsNotEqual">passwords are not equal</string>
 </resources>
