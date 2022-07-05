@@ -14,6 +14,13 @@
         <entry key="app/src/main/res/layout/activity_sweden.xml" value="0.268018018018018" />
         <entry key="app/src/main/res/layout/activity_switzerland.xml" value="0.2543822146216332" />
         <entry key="app/src/main/res/layout/activity_thailand.xml" value="0.30193905817174516" />
+        <entry key="app/src/main/res/layout/fragment_belgium.xml" value="0.1613780598368087" />
+        <entry key="app/src/main/res/layout/fragment_france.xml" value="0.1613780598368087" />
+        <entry key="app/src/main/res/layout/fragment_germany.xml" value="0.11928174433518597" />
+        <entry key="app/src/main/res/layout/fragment_latvia.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/fragment_madagascar.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/fragment_sweden.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/fragment_thailand.xml" value="0.2424112868747328" />
       </map>
     </option>
   </component>

@@ -1,8 +1,8 @@
 package com.example.dz19
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import com.example.dz19.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,33 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.btnToFrance.setOnClickListener {
-            val intent = Intent(this@MainActivity, FranceActivity::class.java)
-            startActivity(intent)
-        }
-        binding.btnToGermany.setOnClickListener {
-            val intent = Intent(this@MainActivity, GermanyActivity::class.java)
-            startActivity(intent)
-        }
-        binding.btnToBelgium.setOnClickListener {
-            val intent = Intent(this@MainActivity, BelgiumActivity::class.java)
-            startActivity(intent)
-        }
-        binding.btnToLatvia.setOnClickListener {
-            val intent = Intent(this@MainActivity, LatviaActivity::class.java)
-            startActivity(intent)
-        }
-        binding.btnToThailand.setOnClickListener {
-            val intent = Intent(this@MainActivity, ThailandActivity::class.java)
-            startActivity(intent)
-        }
-        binding.btnToMadagascar.setOnClickListener {
-            val intent = Intent(this@MainActivity, MadagascarActivity::class.java)
-            startActivity(intent)
-        }
-        binding.btnToSweden.setOnClickListener {
-            val intent = Intent(this@MainActivity, SwedenActivity::class.java)
-            startActivity(intent)
-        }
+        binding.btnToFrance.setOnClickListener { startFragment(FranceFragment()) }
+        binding.btnToGermany.setOnClickListener { startFragment(GermanyFragment()) }
+        binding.btnToBelgium.setOnClickListener { startFragment(BelgiumFragment()) }
+        binding.btnToLatvia.setOnClickListener { startFragment(LatviaFragment()) }
+        binding.btnToThailand.setOnClickListener { startFragment(ThailandFragment()) }
+        binding.btnToMadagascar.setOnClickListener { startFragment(MadagascarFragment()) }
+        binding.btnToSweden.setOnClickListener { startFragment(SwedenFragment()) }
+    }
+    private fun startFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.conteiner, fragment).commit()
     }
 }
