@@ -14,6 +14,6 @@ class MainActivity : AppCompatActivity() {
         startLoginFragment()
     }
     private fun startLoginFragment(){
-        supportFragmentManager.beginTransaction().replace(R.id.container, LoginFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.nav_graph, LoginFragment()).commit()
     }
 }
