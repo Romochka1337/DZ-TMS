@@ -3,11 +3,11 @@ package com.example.zadanie23
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 class PeopleViewModel:ViewModel() {
     init{
-        viewModelScope.async(Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.IO) {
             usersList.add(User("Вольфганг Амадей", "Моцарт", 35,"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wolfgang-amadeus-mozart_1.jpg/250px-Wolfgang-amadeus-mozart_1.jpg" ))
             usersList.add(User("Людвиг Ван", "Бетховен", 56, "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/274px-Beethoven.jpg"))
             usersList.add(User("Иоганн Себастьян", "Бах", 65, "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Johann_Sebastian_Bach.jpg/260px-Johann_Sebastian_Bach.jpg"))
